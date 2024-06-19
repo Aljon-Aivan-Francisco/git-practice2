@@ -1,0 +1,88 @@
+Starting Project
+git init
+git clone
+git config
+
+Commiting changes
+git add
+git commit 
+
+Working with Branches
+
+git branch 
+git checkout 
+git merge
+git fetch
+
+synching changes 
+git pull
+git push 
+
+Helper command
+git status
+git log
+
+
+
+________________________________________________
+Para malaman kung sino ang gumagawa ng mga changes sa repositories
+git config --global user.name "Aljon Francisco" , hit enter
+git config --global user.email aljonaivanefrancisco@gmail.com
+
+**Kunware hindi  na-select si Main as defaul branch while installation of git, you can update it in the git Bash
+git config --global init.default branch main
+
+**for more tools/commands in git bush
+git config -h
+
+
+create folder
+cd Downloads
+cd nameOfTheFolder
+
+Initialize git inside the folder
+git init
+
+To check the track and untrack files inside the created folder
+git status
+
+**may mga lalabas na naka-red na file names, it means hindi pa siya nakasave sa Git, to add them to git
+git add fileName   //for example git add index.html
+
+** use git status to check if successfull ang pag-save sa git
+
+
+** to remove the file or unstage
+git rm --cached fileName //for example git rn --cached index.html
+** use git status to check if successfull ang remove sa git
+
+**you can add all the files just in one instruction
+git add .
+** use git status to check if successfull ang pag-save sa git
+
+
+**for example naka tracked na sa git yung mga files and naisipan mong baguhin ang index.html pero ayaw mo itong mabago sa git
+git status //makikita na may modified/changes na nangyare sa file
+git restore fileName //example git restore Index.html //para hindi rin mabago ang nasa nakasave sa git
+git status // makikita na bumalik sa previous state
+
+**kung gusto naman isave yung modified or changes
+git add fileName //example git add Index.html
+
+** Add exclude files in directory
+touch .gitignore **open the folder and drag it to the git bash to open the .gitignore file and type the filename that you want to ignore, usually sa gitignore nilalagay ang mga node modules, environment variables na hindi pwede ma leask sa git repository
+git add .ignore
+git status // makikita na nata track pa din yung filename na sinave sa gitignore, it happened because naka-save pa sa git yung filename, so para ma-ignore yung filename , you need to remove it to git 
+git rm --cached fileName // example git rm --cached index.html
+git status // makikita na hindi na natracked yung fileName
+
+**Para matanggal sa pagkaka ignore yung file, open the .gitignore and remove mo yung naka type na filename na need mo
+git status // makikita na may naganap na modified or changes
+git add . // para masave
+git status to check if successful
+
+**Commit
+git commit -m "your message/ what did you modified or edit"
+
+
+
